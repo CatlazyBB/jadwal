@@ -3,56 +3,72 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Kartu Ucapan Ulang Tahun</title>
+  <title>Jadwal Tugas Hari Ini</title>
   <style>
     body {
-      margin: 0;
-      padding: 0;
-      background: linear-gradient(to right, #ffecd2, #fcb69f);
-      font-family: 'Segoe UI', sans-serif;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
+      font-family: Arial, sans-serif;
+      background-color: #f1f5f9;
+      padding: 20px;
     }
 
-    .card {
-      background: white;
-      border-radius: 16px;
-      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
-      padding: 40px;
-      max-width: 400px;
+    h1 {
       text-align: center;
-      animation: fadeIn 1s ease-in-out;
+      color: #1e293b;
     }
 
-    .card h1 {
-      font-size: 2rem;
-      color: #ff6f61;
-      margin-bottom: 20px;
+    .task-list {
+      max-width: 500px;
+      margin: 20px auto;
+      background-color: #ffffff;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     }
 
-    .card p {
-      font-size: 1.1rem;
-      color: #555;
+    .task {
+      display: flex;
+      align-items: center;
+      margin-bottom: 15px;
+      font-size: 16px;
+      color: #334155;
     }
 
-    .balloons {
-      font-size: 3rem;
-      margin-bottom: 20px;
+    .task input[type="checkbox"] {
+      margin-right: 10px;
+      width: 18px;
+      height: 18px;
     }
 
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(-20px); }
-      to { opacity: 1; transform: translateY(0); }
+    .task input[type="checkbox"]:checked + span {
+      text-decoration: line-through;
+      color: #9ca3af;
     }
   </style>
 </head>
 <body>
-  <div class="card">
-    <div class="balloons">🎈🎉🎂</div>
-    <h1>Selamat Ulang Tahun Mah 🥳</h1>
-    <p>"Ulang tahun bukan soal usia, tapi soal bagaimana kamu menjalaninya. Happy birthday Mah!"</p>
+  <h1>Jadwal Tugas Hari Ini</h1>
+
+  <div class="task-list">
+    <label class="task">
+      <input type="checkbox">
+      <span>Bangun jam 6 pagi</span>
+    </label>
+    <label class="task">
+      <input type="checkbox">
+      <span>Sarapan dan mandi</span>
+    </label>
+    <label class="task">
+      <input type="checkbox">
+      <span>Berangkat PKL jam 8</span>
+    </label>
+    <label class="task">
+      <input type="checkbox">
+      <span>Mengerjakan laporan harian</span>
+    </label>
+    <label class="task">
+      <input type="checkbox">
+      <span>Belajar HTML/CSS malam hari</span>
+    </label>
   </div>
 </body>
 </html>
